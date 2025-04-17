@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Space Joke Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d1b2a;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .joke-box {
+      background-color: #1b263b;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      max-width: 500px;
+      text-align: center;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #778da9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e0e1dd;
+      color: #1b263b;
+    }
+    a {
+      color: #a9d6e5;
+      margin-top: 2rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="joke-box">
+    <h2>🚀 Space Joke Generator</h2>
+    <p id="joke">Click the button to hear a space joke!</p>
+    <button onclick="showJoke()">Tell Me a Joke</button>
+  </div>
+  <a href="scratch.html">⬅ Back to Scratch Page</a>
+
+  <script>
+    const jokes = [
+      "Why don’t astronauts get hungry after being blasted into space? Because they’ve just had a big launch!",
+      "What do planets like to read? Comet books!",
+      "Why did the sun go to school? To get a little brighter!",
+      "How do you throw a space party? You planet!",
+      "Why did the astronaut break up with his girlfriend? He needed space!",
+      "What kind of songs do the planets sing? Neptunes!"
+    ];
+
+    function showJoke() {
+      const random = Math.floor(Math.random() * jokes.length);
+      document.getElementById("joke").textContent = jokes[random];
+    }
+  </script>
+</body>
+</html>
